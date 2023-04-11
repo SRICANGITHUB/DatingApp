@@ -23,6 +23,7 @@ namespace API.Middleware
         {
             try
             {
+                context.Response.Headers.Add("Access-Control-Allow-Credentials","true");
                 await _next(context);
             }
             catch (Exception ex)
